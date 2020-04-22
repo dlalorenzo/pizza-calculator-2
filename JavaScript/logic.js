@@ -1,5 +1,5 @@
 const pizzas = [
-{name: "Tonno", price: "10", toppings: "tomato saus, mozzarella, red unions, tonno"},
+{name: "Tonno", price: "10", img: "meliodas.jpg", toppings: "tomato saus, mozzarella, red unions, tonno"},
 {name: "Hawaii", price: "5", toppings: "tomato saus, mozzarella, ham, pineaple "},
 {name: "Salami", price: "6", toppings: "tomato saus, mozzarella, pepperoni"},
 {name: "Mozzarella", price: "6", toppings: "tomato saus, mozzarella, tomato, pesto"},
@@ -32,3 +32,16 @@ document.getElementById("quattro-formaggi").innerHTML = "quattro-formaggi";
 document.getElementById("margarita").innerHTML = "margarita";
 document.getElementById("hot-spicy").innerHTML = "hot&spicy";
 document.getElementById("funghi").innerHTML = "funghi";
+
+function pizza(){
+	var btn = document.getElementById("tonno");
+	  btn.innerHTML = "tonijn";
+	  document.getElementById('funghi').style.display = "none";
+	  var img = pizzas[0].img;
+	  console.log(img);
+}
+
+function henk(){
+	document.getElementById("menukaart").style.display = "none";
+	document.getElementById("henk").style.display ="initial";
+}
