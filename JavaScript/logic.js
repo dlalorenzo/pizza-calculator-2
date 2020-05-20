@@ -4,6 +4,7 @@ const pizzas = [
 {name: "Salami", price: "6", toppings: "tomato saus, mozzarella, pepperoni"},
 {name: "Mozzarella", price: "6", toppings: "tomato saus, mozzarella, tomato, pesto"},
 {name: "Chicken-kebab", price: "6", toppings: "tomato saus, mozzarella, red unions, chicken-kebab, garlicsaus"},
+{name: "shoarma", price: "6", toppings: "tomato saus, mozzarella, shoarma, garlicsaus "},
 {name: "Prosciutto", price: "6", toppings: "tomato saus, mozzarella, tomato,  prosciutto, oregano, rucola"},
 {name: "Quattro-formaggi", price: "6", toppings: "tomato saus, mozzarella, ricotta, gorgonzola, pecorino"},
 {name: "Margarita", price: "6", toppings: "tomato saus, mozzarella, oregano"},
@@ -41,7 +42,20 @@ function pizza(){
 	  console.log(img);
 }
 
-function henk(){
+function showPizza(henk3){
 	document.getElementById("menukaart").style.display = "none";
-	document.getElementById("henk").style.display ="initial";
+	document.getElementById("informatie").style.display ="initial";
+
+	//for (var henk3 = 0; henk3 < pizzas.length; henk3++){
+	
+	document.getElementById("name").innerHTML = pizzas[henk3].name;
+	document.getElementById("price").innerHTML = pizzas[henk3].price;
+	document.getElementById("img").innerHTML = pizzas[henk3].img;
+	document.getElementById("toppings").innerHTML = pizzas[henk3].toppings;
+}
+//}
+
+function back(){
+	document.getElementById("menukaart").style.display = "block";
+	document.getElementById("informatie").style.display ="none";
 }
