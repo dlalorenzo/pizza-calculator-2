@@ -1,5 +1,5 @@
 const pizzas = [
-{name: "Tonno", price: "10", img: "meliodas.jpg", toppings: "tomato saus, mozzarella, red unions, tonno"},
+{name: "Tonno", price: "10", img: "img/tonijn.jpg", toppings: "tomato saus, mozzarella, red unions, tonno"},
 {name: "Hawaii", price: "5", toppings: "tomato saus, mozzarella, ham, pineaple "},
 {name: "Salami", price: "6", toppings: "tomato saus, mozzarella, pepperoni"},
 {name: "Mozzarella", price: "6", toppings: "tomato saus, mozzarella, tomato, pesto"},
@@ -42,20 +42,22 @@ function pizza(){
 	  console.log(img);
 }
 
-function showPizza(henk3){
+function showPizza(show){
 	document.getElementById("menukaart").style.display = "none";
-	document.getElementById("informatie").style.display ="initial";
+	document.getElementById("showPizza").style.display ="initial";
+	document.getElementById("terug").style.display ="initial";
 
 	//for (var henk3 = 0; henk3 < pizzas.length; henk3++){
 	
-	document.getElementById("name").innerHTML = pizzas[henk3].name;
-	document.getElementById("price").innerHTML = pizzas[henk3].price;
-	document.getElementById("img").innerHTML = pizzas[henk3].img;
-	document.getElementById("toppings").innerHTML = pizzas[henk3].toppings;
+	document.getElementById("name").innerHTML = pizzas[show].name;
+	document.getElementById("price").innerHTML = pizzas[show].price;
+	document.getElementById("img").src = pizzas[show].img;
+	document.getElementById("toppings").innerHTML = pizzas[show].toppings;
 }
 //}
 
 function back(){
 	document.getElementById("menukaart").style.display = "block";
-	document.getElementById("informatie").style.display ="none";
+	document.getElementById("showPizza").style.display ="none";
+	document.getElementById("terug").style.display ="none";
 }
