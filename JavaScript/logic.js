@@ -1,22 +1,29 @@
 const pizzas = [
-{name: "Tonno", price: 800, img: "img/tonno.jpg", toppings: "tomato saus, mozzarella, red unions, tonno"},
-{name: "Hawaii", price: 600, img:"img/hawaii.jpg", toppings: "tomato saus, mozzarella, ham, pineaple "},
-{name: "Salami", price: 500, img:"img/salami.jpg", toppings: "tomato saus, mozzarella, pepperoni"},
-{name: "Mozzarella", price: 500, img:"img/mozzarella.jpg", toppings: "tomato saus, mozzarella, tomato, pesto"},
-{name: "Chicken-kebab", price: 1000, img:"img/chicken-kebab.jpg", toppings: "tomato saus, mozzarella, red unions, chicken-kebab, garlicsaus"},
-{name: "shoarma", price: 1000, img:"img/shoarma.jpg", toppings: "tomato saus, mozzarella, shoarma, garlicsaus "},
-{name: "Prosciutto", price: 1200, img:"img/prosciutto.jpg", toppings: "tomato saus, mozzarella, tomato,  prosciutto, oregano, rucola"},
-{name: "Quattro-formaggi", price: 700, img:"img/quattro-formaggi.jpg", toppings: "tomato saus, mozzarella, ricotta, gorgonzola, pecorino"},
-{name: "Margarita", price: 500, img:"img/margarita.jpg", toppings: "tomato saus, mozzarella, oregano"},
-{name: "Hot-Spicy", price: 1000, img:"img/hot-spicy.jpg", toppings: "tomato saus, mozzarella, chicken, red union, paprika, pepperoni, peppers"},
-{name: "funghi", price: 800, img:"img/funghi.jpg", toppings: "tomato saus, mozzarella, mushroom, oregano"}
+{name: "Tonno", price: 800, img: "img/tonno.jpg", description: "tomato saus, mozzarella, red unions, tonno"},
+{name: "Hawaii", price: 600, img:"img/hawaii.jpg", description: "tomato saus, mozzarella, ham, pineaple "},
+{name: "Salami", price: 500, img:"img/salami.jpg", description: "tomato saus, mozzarella, pepperoni"},
+{name: "Mozzarella", price: 500, img:"img/mozzarella.jpg", description: "tomato saus, mozzarella, tomato, pesto"},
+{name: "Chicken-kebab", price: 1000, img:"img/chicken-kebab.jpg", description: "tomato saus, mozzarella, red unions, chicken-kebab, garlicsaus"},
+{name: "shoarma", price: 1000, img:"img/shoarma.jpg", description: "tomato saus, mozzarella, shoarma, garlicsaus "},
+{name: "Prosciutto", price: 1200, img:"img/prosciutto.jpg", description: "tomato saus, mozzarella, tomato,  prosciutto, oregano, rucola"},
+{name: "Quattro-formaggi", price: 700, img:"img/quattro-formaggi.jpg", description: "tomato saus, mozzarella, ricotta, gorgonzola, pecorino"},
+{name: "Margarita", price: 500, img:"img/margarita.jpg", description: "tomato saus, mozzarella, oregano"},
+{name: "Hot-Spicy", price: 1000, img:"img/hot-spicy.jpg", description: "tomato saus, mozzarella, chicken, red union, paprika, pepperoni, peppers"},
+{name: "funghi", price: 800, img:"img/funghi.jpg", description: "tomato saus, mozzarella, mushroom, oregano"}
 ];
+const toppings = [
+"extra kaas, pepperoni, sausage, bacon, peppers, mushroom, black olives, jalepenoes, pineapples, onion, diced tomatoes, ham, anchovies"
+];
+
+	let total = 0.00;
+	let topping = 0.50;
+	let count = 0; 
 
 for(i = 0; i < pizzas.length; i++){
 console.log(pizzas[i].name)
 console.log(pizzas[i].price)
 console.log(pizzas[i].img)
-console.log(pizzas[i].toppings)
+console.log(pizzas[i].description)
 };
 
 // let x = document.getElementById("tonno");
@@ -53,7 +60,7 @@ function showPizza(show){
 	document.getElementById("name").innerHTML = pizzas[show].name;
 	document.getElementById("price").innerHTML = pizzas[show].price;
 	document.getElementById("img").src = pizzas[show].img;
-	document.getElementById("toppings").innerHTML = pizzas[show].toppings;
+	document.getElementById("description").innerHTML = pizzas[show].toppings;
 }
 //}
 
